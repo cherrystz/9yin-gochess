@@ -73,7 +73,6 @@
 
 		a,
 		a:visited {
-			bold: true;
 			color: beige
 		}
 	</style>
@@ -110,17 +109,32 @@
 	<div class="playarea">
 		<table>
 			<tr>
-				<td style="width:200px;text-align:left;"><span class="text-info" id="info"></span></td>
+				<td style="width:220px;text-align:left;" class="card bg-dark p-2 my-2"><span class="text-info">
+						ตัวหมากของ <span class="text-success">ผู้เล่น</span> เป็น <span
+							class="text-white bg-black px-1">สีดำ</span>
+						<br>
+						ตัวหมากของ <span class="text-danger">NPC</span> เป็น <span
+							class="text-black bg-white px-1">สีขาว</span>
+					</span>
+
+
+				</td>
+				<td style="width:220px;text-align:left;" class="card bg-dark p-2"><span class="text-info" id="info">
+						<div class="text-center text-white">...</div>
+					</span>
+
+
+				</td>
 				<td>
 					<div id="board">
 						<div id="game"></div>
 					</div>
 				</td>
 				<td style="width:200px;">
-					<input style="width:100%;" id="gochess-search" type="text" placeholder="ค้นหาตำราหมาก..."
-						aria-label="GoChess">
+					<input style="width:100%;" class="my-2 py-1 rounded-3" id="gochess-search" type="text"
+						placeholder="ค้นหาตำราหมาก..." aria-label="GoChess">
 
-					<select style="width:100%;height:450px;" id="select"></select>
+					<select style="width:100%;height:450px;" class="rounded-3" id="select"></select>
 					<div style="width:100%;">
 
 						<button type="button" class="btn btn-info m-2 px-5 text-white" data-bs-toggle="modal"

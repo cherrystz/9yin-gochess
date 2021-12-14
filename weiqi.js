@@ -242,7 +242,9 @@ $(document).ready(function () {
                   var list = $("#select");
                   list.attr("size", 25);
                   $.each(life_qipu, function (life_qipu_key, life_qipu_value) {
-                    var option = $("<option></option>");
+                    var option = $(
+                      `<option class="list-group-item list-group-item-action px-0 py-1 border-0"></option>`
+                    );
                     option.attr("value", life_qipu_value.MiniGame);
                     $.each(names, function (names_key, names_value) {
                       if (names_key == life_qipu_key) {
