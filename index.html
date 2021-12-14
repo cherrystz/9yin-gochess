@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="jquery-3.2.1.min.js">
+	</script>
+	<script type="text/javascript" src="weiqi.js"></script>
+	<link rel="stylesheet" type="text/css" href="reset.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM%20Plex%20Sans%20Thai">
+
+	<style type="text/css">
+		/*UI*/
+		body {
+			font-family: "IBM Plex Sans Thai", sans-serif;
+			background-color: #2f2f2f;
+			color: white;
+		}
+
+		div.playarea {
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			margin-top: -270px;
+			margin-left: -574.5px;
+		}
+
+		td {
+			text-align: center;
+			vertical-align: top;
+		}
+
+
+		#select,
+		#gochess-search {
+			font-family: "IBM Plex Sans Thai", sans-serif;
+		}
+
+		#gochess-search {
+			width: 245px
+		}
+
+		#slider {
+			width: 700px;
+		}
+
+		/* The board */
+		#board {
+			background-image: url("images/weiqi_background.png");
+			background-repeat: no-repeat;
+			width: 749px;
+			height: 540px;
+		}
+
+		#game {
+			background-repeat: no-repeat;
+			width: 477px;
+			height: 477px;
+			left: 145px;
+			top: 27px;
+			position: relative;
+		}
+
+		a,
+		a:visited {
+			bold: true;
+			color: beige
+		}
+	</style>
+	<title>9Yin - เฉลยหมากล้อม</title>
+</head>
+
+<body>
+	<div class="playarea">
+		<table>
+			<tr>
+				<td style="width:200px;text-align:left;"><span id="info"></span></td>
+				<td>
+					<div id="board">
+						<div id="game"></div>
+					</div>
+				</td>
+				<td style="width:200px;">
+					<input style="width:100%;" id="gochess-search" type="text" placeholder="ค้นหาตำราหมาก..."
+						aria-label="GoChess">
+
+					<select style="width:100%;height:500px;" id="select"></select>
+					<!--<br /><input type="checkbox" id="undefined" /><label for="undefined">Display undefined</label>-->
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3"><input id="slider" type="range" min="0" max="0" value="0" /><br /><span
+						id="slidervalue">0</span>/<span id="maxslidervalue">0</span><br />
+					เว็บไซต์ไม่แสวงหากำไรสำหรับเฉลยหมากล้อมของเกม
+					<a href="http://www.9yin.in.th" target="__blank">
+						9Yin Thailand
+					</a>
+					<br />
+					9Yin และเนื้อหาเว็บไซต์ที่เกี่ยวข้องทั้งหมด ซึ่งรวมถึง ข้อความ
+					รูปภาพ และโค้ดเป็นลิขสิทธิ์ของ Suzhou Snail Electronic Co., Ltd.
+					<br />
+					อ้างอิงจากเว็บไซต์ต้นฉบับ
+					<a href="https://9yin.ersan.io/weiqi/">
+						https://9yin.ersan.io/weiqi/
+					</a>
+				</td>
+			</tr>
+		</table>
+
+	</div>
+</body>
+
+</html>
