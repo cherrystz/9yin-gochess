@@ -78,13 +78,20 @@ $(document).ready(function () {
 
     var info = "";
 
-    info += "เวลาในการเล่น: " + weiqisolutions[value].time + " วินาที<br />";
     info +=
-      "จำนวนที่ผิดพลาดได้: " + weiqisolutions[value].errorTime + " ครั้ง<br />";
+      `เวลาในการเล่น: <span class="text-white">` +
+      weiqisolutions[value].time +
+      " วินาที</span><br />";
     info +=
-      "ลำดับเริ่มเล่น: " +
-      (weiqisolutions[value].firstTurn == 1 ? "ผู้เล่น" : "NPC") +
-      "<br />";
+      `จำนวนที่ผิดพลาดได้: <span class="text-warning">` +
+      weiqisolutions[value].errorTime +
+      " ครั้ง</span><br />";
+    info +=
+      `ลำดับเริ่มเล่น: <span class="` +
+      (weiqisolutions[value].firstTurn == 1
+        ? `text-success">ผู้เล่น`
+        : `text-danger">NPC`) +
+      "</span><br />";
 
     $("#info").html(info);
 

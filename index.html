@@ -8,8 +8,16 @@
 	<script type="text/javascript" src="jquery-3.2.1.min.js">
 	</script>
 	<script type="text/javascript" src="weiqi.js"></script>
+	<!-- icon -->
+	<link rel="icon" type="image/png" href="images/weiqi_hei1.png" />
+	<!-- ref -->
 	<link rel="stylesheet" type="text/css" href="reset.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM%20Plex%20Sans%20Thai">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+	</script>
 
 	<style type="text/css">
 		/*UI*/
@@ -21,7 +29,7 @@
 
 		div.playarea {
 			position: fixed;
-			top: 50%;
+			top: 40%;
 			left: 50%;
 			margin-top: -270px;
 			margin-left: -574.5px;
@@ -73,10 +81,36 @@
 </head>
 
 <body>
+	<!-- Modal -->
+	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title text-black-50" id="exampleModalLabel">วิธีใช้งานเว็บไซต์เฉลยหมากล้อม 9Yin
+					</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body text-black">
+					1. ไปที่ NPC หมากล้อมตามเมืองและกด "ประชัน"
+					<br>
+					2. สังเกตชื่อตำราหมากตามตำแหน่งที่วงไว้ในรูป
+					<br>
+					<img src="/images/info/1.jpeg" class="img-fluid" alt="Responsive image">
+					<br>
+					3. ค้นหาชื่อตำราหมากในช่องค้นหาทางขวาของเว็บไซต์
+					<br>
+					<img src="/images/info/2.png" class="img-fluid" alt="Responsive image">
+					<br>
+					4. เลื่อนหลอด Slider ทางด้านล่างเพื่อดูลำดับการเดินหมาก
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Body -->
 	<div class="playarea">
 		<table>
 			<tr>
-				<td style="width:200px;text-align:left;"><span id="info"></span></td>
+				<td style="width:200px;text-align:left;"><span class="text-info" id="info"></span></td>
 				<td>
 					<div id="board">
 						<div id="game"></div>
@@ -86,25 +120,32 @@
 					<input style="width:100%;" id="gochess-search" type="text" placeholder="ค้นหาตำราหมาก..."
 						aria-label="GoChess">
 
-					<select style="width:100%;height:500px;" id="select"></select>
+					<select style="width:100%;height:450px;" id="select"></select>
+					<div style="width:100%;">
+
+						<button type="button" class="btn btn-info m-2 px-5 text-white" data-bs-toggle="modal"
+							data-bs-target="#exampleModal">วิธีใช้งาน</button>
+					</div>
 					<!--<br /><input type="checkbox" id="undefined" /><label for="undefined">Display undefined</label>-->
 				</td>
 			</tr>
 			<tr>
-				<td colspan="3"><input id="slider" type="range" min="0" max="0" value="0" /><br /><span
-						id="slidervalue">0</span>/<span id="maxslidervalue">0</span><br />
+				<td colspan="3"><input id="slider" type="range" min="0" max="0" value="0" /><br><span
+						id="slidervalue">0</span>/<span id="maxslidervalue">0</span><br>
 					เว็บไซต์ไม่แสวงหากำไรสำหรับเฉลยหมากล้อมของเกม
 					<a href="http://www.9yin.in.th" target="__blank">
 						9Yin Thailand
 					</a>
 					<br />
-					9Yin และเนื้อหาเว็บไซต์ที่เกี่ยวข้องทั้งหมด ซึ่งรวมถึง ข้อความ
+					เกม 9Yin และเนื้อหาเว็บไซต์ที่เกี่ยวข้องทั้งหมด ซึ่งรวมถึง ข้อความ
 					รูปภาพ และโค้ดเป็นลิขสิทธิ์ของ Suzhou Snail Electronic Co., Ltd.
 					<br />
-					อ้างอิงจากเว็บไซต์ต้นฉบับ
+					อ้างอิงและดัดแปลงจากเว็บไซต์ต้นฉบับ
 					<a href="https://9yin.ersan.io/weiqi/">
 						https://9yin.ersan.io/weiqi/
 					</a>
+					<br /><br />
+					Created and Modified by <a href="https://github.com/cherrystz/9yin-gochess">cherrystz@github</a>
 				</td>
 			</tr>
 		</table>
